@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Simple Portfolio - Black Background</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            background-color: #000000; /* Black background */
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        a {
+            color: #93c5fd; /* Tailwind blue-300 */
+            text-decoration: underline;
+        }
+        a:hover {
+            color: #bfdbfe; /* Tailwind blue-200 */
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-black via-gray-900 to-black">
+    <!-- Navigation -->
+    <nav class="bg-gray-900 bg-opacity-90 shadow sticky top-0 z-10">
+        <div class="max-w-6xl mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="text-xl font-bold text-blue-300">My Portfolio</div>
+                <div class="space-x-4">
+                    <a href="#hero" class="nav-link hover:text-blue-200 transition">Home</a>
+                    <a href="#about" class="nav-link hover:text-blue-200 transition">About</a>
+                    <a href="#skills" class="nav-link hover:text-blue-200 transition">Skills</a>
+                    <a href="#projects" class="nav-link hover:text-blue-200 transition">Projects</a>
+                    <a href="#contact" class="nav-link hover:text-blue-200 transition">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="py-20">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <div class="mb-8">
+                <img src="profile .jpg" alt="Professional headshot of a confident young web developer with short dark hair, warm smile, wearing glasses and a casual blazer, posing against a blurred office background with subtle tech elements like code snippets visible" class="rounded-full mx-auto ring-4 ring-blue-300 shadow-lg w-40 h-40 sm:w-48 sm:h-48 object-cover" />
+            </div>
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-4 drop-shadow-lg">RAJESHWARAN M</h1>
+            <h2 class="text-2xl md:text-3xl mb-6 font-semibold text-blue-300 drop-shadow-md">Web Developer</h2>
+            <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto leading-relaxed drop-shadow-sm">Passionate about creating responsive, user-friendly web applications using modern technologies.</p>
+            <button onclick="scrollToSection('about')" class="bg-blue-400 text-slate-900 px-8 py-3 rounded-full font-semibold hover:bg-blue-300 transition shadow-md">Learn More</button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-900 bg-opacity-70 rounded-lg max-w-6xl mx-auto px-4 fade-in shadow-lg">
+        <h2 class="text-3xl font-bold text-center mb-8 text-blue-300">About Me</h2>
+        <div class="grid md:grid-cols-2 gap-8 items-center text-gray-300">
+            <div>
+                <p class="text-lg leading-relaxed">Hello! I'm RAJESHWARAN, a dedicated web developer with skills in HTML, CSS, and JavaScript for creating clean and responsive designs. I also work on the backend using Node.js and Python to build fast and secure applications. I enjoy learning new technologies and creating projects that combine design and functionality."</p>
+            </div>
+            <div class="text-center">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9c3393bd-4300-446c-9b3b-e1bec0a1cbde.png" alt="Vibrant workspace setup with a modern desktop computer, multiple monitors displaying code editors, ergonomic chair, plants, and natural lighting from a window overlooking a cityscape" class="rounded-lg shadow-lg" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 bg-gray-900 bg-opacity-70 rounded-lg max-w-6xl mx-auto px-4 mt-12 fade-in shadow-lg">
+        <h2 class="text-3xl font-bold text-center mb-8 text-blue-300">Skills</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div class="bg-gray-800 bg-opacity-50 p-6 rounded-lg shadow text-center hover:bg-blue-400 hover:text-slate-900 transition">
+                <div class="text-4xl mb-4">💻</div>
+                <h3 class="font-bold">HTML & CSS</h3>
+                <p>Building responsive layouts with modern styling.</p>
+            </div>
+            <div class="bg-gray-800 bg-opacity-50 p-6 rounded-lg shadow text-center hover:bg-blue-400 hover:text-slate-900 transition">
+                <div class="text-4xl mb-4">⚡</div>
+                <h3 class="font-bold">JavaScript</h3>
+                <p>Dynamic and interactive web applications.</p>
+            </div>
+            <div class="bg-gray-800 bg-opacity-50 p-6 rounded-lg shadow text-center hover:bg-blue-400 hover:text-slate-900 transition">
+                <div class="text-4xl mb-4">🚀</div>
+                <h3 class="font-bold">React</h3>
+                <p>User interfaces with reusable components.</p>
+            </div>
+            <div class="bg-gray-800 bg-opacity-50 p-6 rounded-lg shadow text-center hover:bg-blue-400 hover:text-slate-900 transition">
+                <div class="text-4xl mb-4">🛠️</div>
+                <h3 class="font-bold">Node.js</h3>
+                <p>Server-side scripting for robust backends.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 bg-gray-900 bg-opacity-70 rounded-lg max-w-6xl mx-auto px-4 mt-12 fade-in shadow-lg">
+        <h2 class="text-3xl font-bold text-center mb-8 text-blue-300">Projects</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-gray-800 bg-opacity-50 p-6 rounded-lg shadow hover:bg-blue-400 hover:text-slate-900 transition">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/64e9a40b-496e-4e00-89a3-45acb7f27b6c.png" alt="Screenshot of a responsive e-commerce website landing page featuring product grid layout, navigation bar, shopping cart icon, and call-to-action button with vibrant colors and modern design" class="rounded mb-4 object-cover" />
+                <h3 class="font-bold text-xl mb-2">E-Commerce Site</h3>
+                <p class="mb-4">A fully responsive online store built with HTML, CSS, and JavaScript.</p>
+                <a href="#" class="underline hover:text-blue-200">View Project</a>
+            </div>
+            <div class="bg-gray-800 bg-opacity-50 p-6 rounded-lg shadow hover:bg-blue-400 hover:text-slate-900 transition">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/dbc2a462-99b3-49c8-aaa7-29a661c4c50c.png" alt="Dashboard interface for a task management application showing progress charts, task lists, user profile section, and clean minimalistic design with blue and white color scheme" class="rounded mb-4 object-cover" />
+                <h3 class="font-bold text-xl mb-2">Task Manager</h3>
+                <p class="mb-4">A JavaScript app for organizing daily tasks with local storage.</p>
+                <a href="#" class="underline hover:text-blue-200">View Project</a>
+            </div>
+            <div class="bg-gray-800 bg-opacity-50 p-6 rounded-lg shadow hover:bg-blue-400 hover:text-slate-900 transition">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/c0a32cfe-65c3-4471-8c22-73c13934697f.png" alt="Weather application interface displaying current weather for a city, forecast cards, animated icons, and responsive layout adapting to different screen sizes" class="rounded mb-4 object-cover" />
+                <h3 class="font-bold text-xl mb-2">Weather App</h3>
+                <p class="mb-4">Real-time weather information fetched via API using JavaScript.</p>
+                <a href="#" class="underline hover:text-blue-200">View Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-900 bg-opacity-70 rounded-lg max-w-6xl mx-auto px-4 mt-12 fade-in shadow-lg">
+        <h2 class="text-3xl font-bold text-center mb-8 text-blue-300">Get In Touch</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="text-gray-300">
+                <h3 class="font-bold text-xl mb-4">Contact Information</h3>
+                <p class="mb-2">Email:rajeshmramalingam@gmail.com</p>
+                <p class="mb-2">Phone: 7358253562</p>
+                <p class="mb-2">LinkedIn: <a href="#" class="underline hover:text-blue-200">https://www.linkedin.com/in/rajeshwaran-m-240a49305</a></p>
+                <p class="mb-2">GitHub: <a href="#" class="underline hover:text-blue-200">https://github.com/rajeshwaran-bit</a></p>
+            </div>
+            <form class="bg-gray-800 bg-opacity-50 p-6 rounded-lg shadow-lg">
+                <div class="mb-4">
+                    <label for="name" class="block font-bold mb-2 text-white">Name</label>
+                    <input type="text" id="name" class="w-full px-3 py-2 border border-blue-300 rounded bg-gray-900 text-white" required />
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block font-bold mb-2 text-white">Email</label>
+                    <input type="email" id="email" class="w-full px-3 py-2 border border-blue-300 rounded bg-gray-900 text-white" required />
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="block font-bold mb-2 text-white">Message</label>
+                    <textarea id="message" rows="5" class="w-full px-3 py-2 border border-blue-300 rounded bg-gray-900 text-white" required></textarea>
+                </div>
+                <button type="submit" class="bg-blue-400 text-slate-900 px-6 py-3 rounded hover:bg-blue-300 transition shadow-md">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-8 mt-12">
+        <div class="max-w-6xl mx-auto px-4 text-center text-gray-400">
+            <p>© 2025 RAJESHWARN.M All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! I will get back to you soon.');
+        });
+    </script>
+</body>
+</html>
